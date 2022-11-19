@@ -1,0 +1,153 @@
+{
+  "banner": [
+    {
+      "id": 1,
+      "src": "./img/khung gio sale.gif",
+      "description": "Khung giờ săn sale"
+    },
+    {
+      "src": "./img/gi cung re.png",
+      "description": "gì cũng rẻ - mua là freeship",
+      "id": 2
+    },
+    {
+      "src": "./img/flash sale.png",
+      "description": "Flash Sale",
+      "id": 3
+    },
+    {
+      "src": "./img/free ship.jpg",
+      "description": "Miễn phí vận chuyển",
+      "id": 4
+    },
+    {
+      "src": "./img/bat trend.png",
+      "description": "Bắt trend- giá sốc",
+      "id": 5
+    },
+    {
+      "src": "./img/hoan xu.png",
+      "description": "Hoàn Xu Xtra Từ 100K",
+      "id": 6
+    },
+    {
+      "src": "./img/sale hang hieu.png",
+      "description": "Hàng Hiệu Giá Tốt",
+      "id": 7
+    },
+    {
+      "src": "./img/hang quoc te.png",
+      "description": "Hàng Quốc Tế - Thương Hiệu...",
+      "id": 8
+    },
+    {
+      "src": "./img/nap the.png",
+      "description": "Nạp Thẻ & Dịch Vụ",
+      "id": 9
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "src_top": "./img/áo.png",
+      "description_top": "Thời Trang Nam",
+      "src_bottom": "./img/fashion.png",
+      "description_bottom": "Thời Trang Nữ"
+    },
+    {
+      "src_top": "./img/phone.png",
+      "description_top": "Điện Thoại & Phụ Kiện",
+      "src_bottom": "./img/me va be.png./img/me va be.png",
+      "description_bottom": "Mẹ & Bé",
+      "id": 2
+    },
+    {
+      "src_top": "./img/tv.png",
+      "description_top": "Thiết Bị Điện Tử",
+      "src_bottom": "./img/nha cua va doi song.png",
+      "description_bottom": "Nhà Cửa & Đời Sống",
+      "id": 3
+    },
+    {
+      "src_top": "./img/laptop.png",
+      "description_top": "Máy Tính & Laptop",
+      "src_bottom": "./img/cosmetic.png",
+      "description_bottom": "Sắc ĐẹpSắc Đẹp",
+      "id": 4
+    },
+    {
+      "src_top": "./img/camera.png",
+      "description_top": "Máy Ảnh & Máy Quay Phim",
+      "src_bottom": "./img/health.png",
+      "description_bottom": "Sức Khỏe",
+      "id": 5
+    },
+    {
+      "src_top": "./img/clock.png",
+      "description_top": "Đồng Hồ",
+      "src_bottom": "./img/shoes women.png",
+      "description_bottom": "Giày Dép Nữ",
+      "id": 6
+    },
+    {
+      "src_top": "./img/shoes women.png",
+      "description_top": "Giày Dép Nam",
+      "src_bottom": "./img/hand bag.png",
+      "description_bottom": "Túi Ví Nữ",
+      "id": 7
+    },
+    {
+      "src_top": "./img/Houseware.png",
+      "description_top": "Thiết Bị Gia Dụng",
+      "src_bottom": "./img/accessory.png",
+      "description_bottom": "Phụ Kiện & Trang Sức Nữ",
+      "id": 8
+    },
+    {
+      "src_top": "./img/sport.png",
+      "description_top": "Thể Thao & Du Lịch",
+      "src_bottom": "./img/bach hoa.png",
+      "description_bottom": "Bách Hóa Online",
+      "id": 9
+    },
+    {
+      "src_top": "./img/vehicle.png",
+      "description_top": "Oto & Xe Máy & Xe Đạp",
+      "src_bottom": "./img/book.png",
+      "description_bottom": "Nhà Sách online",
+      "id": 10
+    }
+  ],
+  "product_sale": [
+    {
+      "src": "./img/productSale1.jpg",
+      "price": "200$",
+      "id": 1
+    },
+    {
+      "src": "./img/productSale2.jpg",
+      "price": "300$",
+      "id": 2
+    },
+    {
+      "src": "./img/productSale3.jpg",
+      "price": "100$",
+      "id": 3
+    },
+    {
+      "src": "./img/productSale4.jpg",
+      "price": "500$",
+      "id": 4
+    },
+    {
+      "src": "./img/productSale5.jpg",
+      "price": "400$",
+      "id": 5
+    },
+    {
+      "src": "./img/productSale6.jpg",
+      "price": "1500$",
+      "id": 6
+    }
+  ]
+}
