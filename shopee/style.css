@@ -39,6 +39,23 @@ a {
     margin: 2px;
     border-right: 2px solid rgba(255, 255, 255, 0.2);
 }
+.nav-info #download,
+.nav-info .download{
+    display: flex;
+}
+
+.nav-info li{
+    list-style-type: none;
+}
+.nav-info ctn-hover {
+    display:flex;
+    position: relative;
+}
+
+.nav-info ul img {
+    position:absolute;
+    left: 0%;
+}
 
 .ctn:hover{
     opacity: 0.6;
@@ -100,7 +117,7 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
-.wrapper .search-bottom{
+.search-btn .search-bottom{
     display: flex;
 }
 
@@ -146,7 +163,7 @@ a {
     cursor: pointer;
 }
 
-.wrapper .list-product{
+.search-bottom .list-product{
     display: flex
 }
 

@@ -1,5 +1,4 @@
- 
-// select API
+ // select API
 const bannerApi = 'http://localhost:3000/banner';
 const categoryApi = 'http://localhost:3000/category';
 const productApi = 'http://localhost:3000/product_sale';
