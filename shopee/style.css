@@ -19,6 +19,28 @@ a {
     text-decoration: none;
 }
 
+/* .head {
+    position: relative;
+} */
+
+
+#download {
+    position: relative;
+}
+
+.QRApp{
+    display: none;
+    position:absolute;
+    width: 115px;
+    height: 143px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.QRApp img{
+    margin:7px 7px 7px 7px;
+}
+
 .container .nav-bar{
     display: flex;
     font-family: Helvetica,Helvetica,Arial;
@@ -39,22 +61,9 @@ a {
     margin: 2px;
     border-right: 2px solid rgba(255, 255, 255, 0.2);
 }
-.nav-info #download,
-.nav-info .download{
-    display: flex;
-}
 
 .nav-info li{
     list-style-type: none;
-}
-.nav-info ctn-hover {
-    display:flex;
-    position: relative;
-}
-
-.nav-info ul img {
-    position:absolute;
-    left: 0%;
 }
 
 .ctn:hover{
@@ -87,7 +96,30 @@ a {
 }
 
 .nav-link .nav-language {
-    /* margin-right: 8px; */
+    list-style: none;
+    position: relative;
+}
+
+.nav-language .language{
+    display: none;
+    position: absolute;
+    width: 180px ;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 2px;
+    right: 0%;
+}
+
+.nav-language ul{
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+
+.nav-language ul:hover{
+    color: #FE5621;
 }
 
 .nav-link .ti-angle-down{
