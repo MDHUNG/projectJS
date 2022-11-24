@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica,Helvetica,Arial;
+    font-size: 13px;
+}
+
+body{
+    width: 100%;
+    background-color: #ccc;
+}
+
+.container{
+    max-width: 400px;
+    max-height: 500px;
+    margin: auto;
+    /* border: 1px solid #ccc; */
+    border-radius: 6px;
+    margin-top: 100px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .3);
+    background-color: #fff;
+}
+
+.container .sign-header{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #FE5621;
+}
+
+.container h1{
+    font-size: 26px;
+    padding: 10px 0px;
+    text-align: center;
+    color:#fff;
+}
+
+.container .sign-up-top{
+    margin: 20px 10px ;
+}
+
+.sign-up-top .ctn{
+    margin: 6px 0;
+}
+
+.sign-up-top p{
+    opacity: 0.8;
+    margin: 10px 0 4px 0;
+    font-size: 16px;
+}
+
+.sign-up-top input{
+    font-size: 18px;
+    width: 100%;
+    padding: 4px;
+    border-width:1.5px;
+    border-color:rgba(0, 0, 0, .3);
+    border-radius: 4px;
+}
+
+input::placeholder{
+    font-size: 13px;
+}
+
+input:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.container .sign-up-bottom{
+    /* text-align: center; */
+    margin: 15px 0 10px 0;
+}
