@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,17 +17,28 @@
     <div class="sign-up-top">
       <div class="email ctn">
         <p>email hoặc số điện thoại</p>
-        <input type="text" class="email-sign-up" placeholder="email@address.com ">
-        <span class="mess"></span>
+        <div class="email-input">
+          <input type="email" id="email" class="email-sign-up" placeholder="email@address.com ">
+          <span><i class="fa fa-check-circle-o"></i></span>
+        </div>
+        <span class="mess-email"></span>
       </div>
       <div class="password ctn">
         <p>password</p>
-        <input type="text" class="pass-sign-up" placeholder="nhập mật khẩu">
+        <div class="pass-input">
+          <input type="password" id="pass" maxlength="20" class="pass-sign-up pass" placeholder="nhập mật khẩu" required>
+          <span class="show-pass "><i class="ti-eye"></i></span>
+        </div>
         <span class="mess"></span>
       </div>
       <div class="re-enter password ctn">
         <p>re-enter password</p>
-        <input type="text" class="re-enter-pass" placeholder="nhập lại mật khẩu">
+        <div class="pass-input">
+          <input type="password" id="rePass" class="re-enter-pass pass" placeholder="nhập mật khẩu" required>
+          <span class="show-pass">
+            <i class="ti-eye"></i>
+          </span>
+        </div>
         <span class="mess"></span>
       </div>
     </div>
