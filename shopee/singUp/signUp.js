@@ -13,13 +13,13 @@ for (let i = 0; i < showPass.length; i++){
 }
 
 const emailsInput = document.getElementById("email");
-const passWords =document.getElementById('pass');
 const messEmail = document.querySelector('.mess-email');
 const signUpBtn = document.querySelector('.sign-up-btn');
 const iconCheck = document.querySelector('.fa');
 const obj = {
   email:"",
-  passWord:""
+  passWord:"",
+  rePassword:""
 };
 
 const validateEmail = (email) => {
@@ -45,10 +45,31 @@ const validateEmailValue = function (e) {
 
 emailsInput.addEventListener('change',validateEmailValue)
 
+const passWords =document.getElementById('pass');
 passWords.addEventListener('change',(e) => {
   obj.passWord = e.target.value; 
 })
 
-signUpBtn.addEventListener('click',() => {
-  console.log(obj)
-});
+const rePass = document.getElementById('rePass');
+rePass.addEventListener('change',(e) => {
+  obj.rePassword = e.target.value;
+})
+
+const messRePass = document.querySelector('.mess-repass');
+const validatePass = function ( pass, rePass){
+  if (pass === rePass){
+    messRePass.style.display = 'none'; 
+    return true;
+  }else {
+    messRePass.style.display = 'block';
+    messRePass.innerHTML ="nhập lại ";
+    messRePass.style.color ='red';
+    return false;
+  }
+}; 
+
+const validateSignUp = function (){
+  if (validatePass == true && validateEmailValue == true){
+  }
+}
+
