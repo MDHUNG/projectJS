@@ -14,7 +14,6 @@ for (let i = 0; i < showPass.length; i++){
 
 const emailsInput = document.getElementById("email");
 const messEmail = document.querySelector('.mess-email');
-const signUpBtn = document.querySelector('.sign-up-btn');
 const iconCheck = document.querySelector('.fa');
 const obj = {
   email:"",
@@ -28,8 +27,7 @@ const validateEmail = (email) => {
   );
 };
 
-const validateEmailValue = function (e) {
-  obj.email = e.target.value;
+const validateEmailValue = function () {
   if (validateEmail(obj.email)){
     iconCheck.style.display = 'block';
     messEmail.style.display = 'none';
@@ -43,7 +41,9 @@ const validateEmailValue = function (e) {
   }
 }
 
-emailsInput.addEventListener('change',validateEmailValue)
+emailsInput.addEventListener('change',(e) => {
+  obj.email = e.target.value;
+})
 
 const passWords =document.getElementById('pass');
 passWords.addEventListener('change',(e) => {
@@ -55,8 +55,8 @@ rePass.addEventListener('change',(e) => {
   obj.rePassword = e.target.value;
 })
 
-const messRePass = document.querySelector('.mess-repass');
-const validatePass = function ( pass, rePass){
+const messRePass = document.querySelector('.mess-repass'); 
+function validatePass ( pass, rePass){
   if (pass === rePass){
     messRePass.style.display = 'none'; 
     return true;
@@ -68,8 +68,20 @@ const validatePass = function ( pass, rePass){
   }
 }; 
 
-const validateSignUp = function (){
-  if (validatePass == true && validateEmailValue == true){
+ function validateSignUp (){
+  if (validatePass(obj.passWord,obj.rePassword) === true && validateEmailValue() === true){
+    return true
+  } else {
+    return false
   }
 }
 
+const signUpBtn = document.querySelector('.sign-up-btn');
+signUpBtn.addEventListener('click',() => {
+  validatePass(obj.passWord,obj.rePassword)
+  if(validateSignUp() === true){
+    function postAccApi (){
+      
+    }
+  }
+})
