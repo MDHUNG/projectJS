@@ -149,5 +149,12 @@
       "price": "1500$",
       "id": 6
     }
+  ],
+  "Users": [
+    {
+      "email": "duchung151002@gmail.com",
+      "password": "qqq",
+      "id": 1
+    }
   ]
 }
