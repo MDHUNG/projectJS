@@ -1,26 +1,44 @@
 //show password
 const showPass = document.querySelectorAll('.ti-eye');
 const pass = document.querySelectorAll('.pass');
+const hidePass = document.querySelectorAll('.fa-eye-slash');
 
 for (let i = 0; i < showPass.length; i++){
   showPass[i].addEventListener ('click', () => {
     if(pass[i].type === 'password'){
       pass[i].type = 'text';
+      // hidePass.style.display = 'block';
+      // showPass.style.display = 'none';
     } else {
       pass[i].type = 'password';
+      // hidePass.style.display = 'none';
+      showPass.style.display = 'block';
     }
   })
 }
 
-function saveUsers (){
+// get api
+const usersApi = 'http://localhost:3000/Users';
+
+    fetch(usersApi)
+    .then (users => {
+      return users.json();
+    })
+    .then ((user) => {
+      saveUsers(user);
+      console.log(user);
+    }) 
+
+function saveUsers (user){
   let emails ="";
   let password ="";
   let rePass = "";
   //select email
   const emailInput = document.getElementById('email');
   emailInput.addEventListener('change', showEmail)
-  function showEmail (e){
+  function showEmail (e) {
     emails = e.target.value;
+    validate();
   }
 
   //check email
@@ -32,6 +50,10 @@ function saveUsers (){
     );
   };
 
+  emailInput.addEventListener('click', function(){
+    messEmail.style.display = 'none';
+  })
+  
   function validate() {
     if (validateEmail(emails)){
       iconCheck.style.display = 'block';
@@ -53,52 +75,56 @@ function saveUsers (){
   }
   
   const repass = document.getElementById('rePass');
-  repass.addEventListener('change', validatePass)
-  function validatePass (e) {
+  repass.addEventListener('change', validateRePass)
+  function validateRePass (e) {
     rePass = e.target.value;
   }
 
-  const Btn = document.querySelector('.sign-up-btn');
-  Btn.addEventListener('click', addUsers)
-  function addUsers (){
-    
-    // check password
-    const messRePass = document.querySelector('.mess-repass'); 
-    function validatePass ( pass, rePass){
-      if (pass === rePass){
-        messRePass.style.display = 'none'; 
+  const messRePass = document.querySelector('.mess-repass'); 
+  function validatePass (pass,rePass){
+    if ( pass === rePass ){
+      messRePass.style.display = 'none'; 
+      return true;
+    } else {
+      messRePass.style.display = 'block';
+      messRePass.innerHTML ="nhập lại ";
+      messRePass.style.color ='red';
+    }
+  };
+
+  repass.addEventListener('click',() => messRePass.style.display = 'none' );
+
+  function checkEmailExist(users){
+    for (let i = 0; i < users.length; i++){
+      if(users[i].email === emails){
         return true;
       } else {
-        messRePass.style.display = 'block';
-        messRePass.innerHTML ="nhập lại ";
-        messRePass.style.color ='red';
         return false;
-      }
-    }; 
-    
-    if (validate() == true && validatePass( password, rePass) == true){
-      let users =
-        {
-          email: emails,
-          password: password,
         }
-
-      if (users == null){
-        users = [];
-      }
-      fetch('http://localhost:3000/Users',{
-        method:'post',
-        headers:{
-          'content-type': 'application/json',
-        },
-        body: JSON.stringify(users),
-      })
-      .then((response) => response.json())
-      .then((users) => {
-        console.log(users);
-      })
+    }
+  }
+  function conditionSave() {
+    if (checkEmailExist === false && validatePass(password,rePass) === true && validate() === true){
+      (async () => {
+        const userPostApi = await fetch(usersApi, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({email:emails,password:password})
+        });
+        const user = await userPostApi.json();
+      
+        console.log(user);
+      })();
+      console.log('hi');
+    } else {
+      console.log('email này đã được sử dụng')
     }
   }
 
+  document.querySelector('.sign-up-btn').addEventListener('click', function(){
+    conditionSave();
+  })
 };
-saveUsers()

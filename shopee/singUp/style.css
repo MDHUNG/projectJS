@@ -66,11 +66,11 @@ body{
 .password span{
     font-size:13px
 }
-.email-input input:-internal-autofill-selected {
+/* .email-input input:-internal-autofill-selected {
     /* appearance:none; */
-    background-image: none !important;
+    /* background-image: none !important;
     background-color: -internal-light-dark(rgb(232, 240, 254)) !important;
-    color:#fff!important;}
+    color:#fff!important;} */ 
 .pass-input {
     display: flex;
     border: 2px solid #ccc;
@@ -82,7 +82,15 @@ body{
     width: 90%;
 }
 
-.pass-input i{
+.pass-input i .ti-eye{
+    display: none;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+}
+
+.pass-input .fa-light{
+    display: none;
     text-align: center;
     width: 10%;
     height: 100%;

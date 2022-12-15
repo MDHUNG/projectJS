@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./font/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e0cd3007ec.js" crossorigin="anonymous"></script>    <title>Document</title>
 </head>
 <body>
   <div class="container">
@@ -26,8 +25,11 @@
       <div class="password ctn">
         <p>password</p>
         <div class="pass-input">
-          <input type="password" id="pass" maxlength="20" class="pass-sign-up pass" placeholder="nhập mật khẩu" required>
-          <span class="show-pass "><i class="ti-eye"></i></span>
+          <input type="password" id="pass" maxlength="20" minlength="8" class="pass-sign-up pass" placeholder="nhập mật khẩu" required>
+          <span class="show-pass ">
+            <i class="ti-eye"></i>
+            <i class="fa-light fa-eye-slash"></i>
+          </span>
         </div>
         <span class="mess-pass"></span>
       </div>
@@ -37,6 +39,7 @@
           <input type="password" id="rePass" class="re-enter-pass pass" placeholder="nhập mật khẩu" required>
           <span class="show-pass">
             <i class="ti-eye"></i>
+            <i class="fa-light fa-eye-slash"></i>
           </span>
         </div>
         <span class="mess-repass"></span>
@@ -48,6 +51,6 @@
   </div>
 
 
-  <script src="signUp.js"></script>
+  <script type="module" src="signUp.js"></script>
 </body> 
 </html>
