@@ -12,7 +12,7 @@ for (let i = 0; i < showPass.length; i++){
     } else {
       pass[i].type = 'password';
       // hidePass.style.display = 'none';
-      showPass.style.display = 'block';
+      // showPass.style.display = 'block';
     }
   })
 }
@@ -74,21 +74,25 @@ function saveUsers (user){
     password = e.target.value;
   }
   
+  
   const repass = document.getElementById('rePass');
   repass.addEventListener('change', validateRePass)
   function validateRePass (e) {
     rePass = e.target.value;
   }
 
+  const messPass = document.querySelector('.mess-pass');
   const messRePass = document.querySelector('.mess-repass'); 
   function validatePass (pass,rePass){
     if ( pass === rePass ){
       messRePass.style.display = 'none'; 
       return true;
-    } else {
+    }
+    else {
       messRePass.style.display = 'block';
       messRePass.innerHTML ="nhập lại ";
       messRePass.style.color ='red';
+      return false;
     }
   };
 
