@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 7em;
+}
+
+.container-left{
+    grid-column: 1/2;
+    width: 100%;
+    padding: 8px;
+}
+
+.container-left .ctn-left-header{
+    margin: 20px 0 50px 0px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Inconsolata",SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    font-weight: 500;
+}
+
+.email,
+.password{
+    position: relative;
+    margin: 20px 0 10px;
+    width: 100%;
+}
+
+.email input,
+.password input{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding:10px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.email input:focus,
+.email input:valid,
+.password input:focus,
+.password input:valid{
+    outline: 0;
+}
+
+.email label,
+.password label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+}
+
+.email label span,
+.password label span {
+    display:inline-block;
+    font-size: 16px;
+    transition:transform .3s linear;
+}
+
+.email input:focus+label span,
+.password input:focus+label span{
+    transform: translateY(-20px);
+}
+
+.pass-help{
+    display: flex;
+    width: 100%;
+    margin: 10px 0px 10px 4px;
+}
+
+.pass-help .remember-password{
+    float: left;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pass-help .forgot-password{
+    float: right;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.forgot-password a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.pass-help .clear{
+    flex: 1;
+}
+
+.btn-login{
+    width: 100%;
+    margin: 48px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-login button{
+    padding: 8px 40px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Inconsolata",SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+
+}
+
+.btn-login button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.container-right{
+    grid-column: 2/3;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: "Inconsolata",SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+.header-ctn-right{
+    margin-top: 60px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.mid-ctn-right{
+    margin: 40px 0px 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-mid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mid-ctn-right button{
+    margin: 10px 0px;
+    padding: 4px;
+    width: 40%;
+}
+
+.footer-ctn-right{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+
+.footer-ctn-right span{
+    grid-row: 1/2;
+    text-align: center;
+}
+
+.footer-ctn-right .icon-footer{
+    margin-top: 10px;
+    grid-row: 2/3;
+    text-align: center;
+    font-size: 24px;
+    margin: 0 4px;
+}
